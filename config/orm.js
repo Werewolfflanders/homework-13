@@ -30,7 +30,7 @@ function objToSql(ob) {
 
 let orm = {
 // select all from db
-  all: function(tableInput, cb) {
+  selectAll: function(tableInput, cb) {
     let queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -40,7 +40,7 @@ let orm = {
     });
   },
   // create new entry in db
-  create: function(table, cols, vals, cb) {
+  insertOne: function(table, cols, vals, cb) {
     let queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -59,7 +59,7 @@ let orm = {
     });
   },
   //update entry in db
-  update: function(table, objColVals, condition, cb) {
+  updateOne: function(table, objColVals, condition, cb) {
     let queryString = "UPDATE " + table;
 
     queryString += " SET ";

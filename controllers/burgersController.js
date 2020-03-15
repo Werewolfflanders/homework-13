@@ -6,7 +6,7 @@ const burger = require("../models/burger");
 
 //create routes 
 router.get("/", (req, res) => {
-  burger.all(data => {
+  burger.selectAll(data => {
     const hbsObject = {
       burgers: data
     };
@@ -15,14 +15,14 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-  burger.create(["burger_name"], [req.body.burger_name], result => {
+  burger.insertOne(["burger_name"], [req.body.burger_name], result => {
     res.json({ id: result.insertId });
   });
 });
 
 router.put("/api/burgers/:id", (req, res) => {
   const condition = "id = " + req.params.id;
-  burger.update(
+  burger.updateOne(
     {
       devoured: req.body.devour
     },
