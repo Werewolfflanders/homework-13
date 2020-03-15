@@ -4,6 +4,7 @@ const router = express.Router();
 
 const burger = require("../models/burger");
 
+//create routes 
 router.get("/", (req, res) => {
   burger.all(data => {
     const hbsObject = {
@@ -35,5 +36,5 @@ router.put("/api/burgers/:id", (req, res) => {
     }
   );
 });
-
+//send routes to server.js
 module.exports = router;
