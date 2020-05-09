@@ -1,0 +1,40 @@
+body {
+    background-color: #90EE90;
+  }
+  
+  hr {
+    color: #556B2F;
+  }
+  
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  
+  section {
+    text-align: center;
+    border-style: solid;
+  }
+  
+  section#burger-heading {
+    padding: 2rem 0;
+  }
+  
+  section#burger-heading .section-heading {
+    padding-top: 2rem;
+  }
+  
+  section#burger-heading {
+    padding: 3rem 0;
+  }
+  
+  section#burger-body {
+    margin-top: 2rem;
+    padding: 3rem 0;
+  }
+  
+  section#burger-form {
+    margin-top: 2rem;
+    padding: 3rem 0;
+  }

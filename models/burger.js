@@ -1,5 +1,5 @@
 const orm = require("../config/orm");
-
+// set up burger structure for orm.js
 let burger = {
   selectAll: function(cb) {
     orm.selectAll("burgers", res => {
@@ -22,5 +22,5 @@ let burger = {
     });
   }
 };
-
+//export db functions for burger_controller.js
 module.exports = burger;
